@@ -11,7 +11,7 @@ Make sure Docker and [Docker Compose](https://docs.docker.com/compose/install/) 
 ## Quick Start
 
 ```
-git clone https://github.com/geerlingguy/internet-monitoring
+git clone https://github.com/SirPoot-/internet-monitoring
 cd internet-monitoring
 docker-compose up -d
 ```
@@ -50,6 +50,17 @@ http://localhost:9090/graph?g0.expr=probe_http_status_code&g0.tab=1 shows promet
 http://localhost:9115 blackbox exporter endpoint. Lets you see what have failed/succeded.
 
 http://localhost:9798/metrics speedtest exporter endpoint. Does take about 30 seconds to show its result as it runs an actual speedtest when requested.
+
+## Firewall Rules
+
+Following commands are for UFW firewall port configuration.
+
+```
+sudo ufw allow 3030
+sudo ufw allow 9090
+sudo ufw allow 9115
+sudo ufw allow 9798
+```
 
 ## Thanks and a disclaimer
 
